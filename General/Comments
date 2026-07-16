@@ -1,0 +1,3 @@
+Felix: 
+- Ich würde vorschlagen noch mind. einen pin zwischen analog und digital teil zu packen, sodass wir die daten vom ADC auch auslesen können,
+  falls etwas mit dem digital teil schiefgeht 
