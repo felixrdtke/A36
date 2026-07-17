@@ -1,0 +1,8 @@
+Frequenz Reduziert auf 100KHz, Auflösung von 8bit soll erhalten bleiben
+* Freitag 17.7.: 100kS/s buffer vollenden
+* Samstag 18.7.: alles zusammensetzen (komparator überarbeitet)
+* Sonntag 19.7.: flicken
+* Präsentation Slide 7 ergänzen: https://docs.google.com/presentation/d/1K8XorgBDBkJcbI__HvUmtIe6wbuIDKYyDhXzTtXr4RQ/edit?slide=id.g3f545fe77c6_0_255#slide=id.g3f545fe77c6_0_255
+* Präsentation: Gesamtsimulation ergänzen
+* Referenzschaltung: Buffer ergänzen
+* Deadline, Dienstag abend 17.7.
