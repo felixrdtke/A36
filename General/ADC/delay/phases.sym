@@ -1,0 +1,35 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+spectre_format="@name ( @pinlist ) @symname"
+template="name=x1"
+}
+V {}
+S {}
+F {}
+E {}
+L 4 160 10 180 10 {}
+L 4 160 40 180 40 {}
+L 4 0 0 20 0 {}
+L 4 160 70 180 70 {}
+L 4 20 -10 160 -10 {}
+L 4 160 -10 160 90 {}
+L 4 20 90 160 90 {}
+L 4 20 -10 20 90 {}
+L 7 70 -30 70 -10 {}
+L 7 70 90 70 110 {}
+B 5 177.5 7.5 182.5 12.5 {name=phi2 dir=out}
+B 5 67.5 -32.5 72.5 -27.5 {name=vdd dir=inout}
+B 5 177.5 37.5 182.5 42.5 {name=phi4 dir=out}
+B 5 -2.5 -2.5 2.5 2.5 {name=clk dir=in}
+B 5 177.5 67.5 182.5 72.5 {name=phi6 dir=out}
+B 5 67.5 107.5 72.5 112.5 {name=vss dir=inout}
+T {phases} 55 24 0 0 0.3 0.3 {}
+T {@name} 105 -22 0 0 0.2 0.2 {}
+T {phi2} 155 6 0 1 0.2 0.2 {}
+T {vdd} 75 -4 0 1 0.2 0.2 {}
+T {phi4} 155 36 0 1 0.2 0.2 {}
+T {clk} 25 -4 0 0 0.2 0.2 {}
+T {phi6} 155 66 0 1 0.2 0.2 {}
+T {vss} 75 76 0 1 0.2 0.2 {}
