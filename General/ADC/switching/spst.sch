@@ -7,7 +7,7 @@ F {}
 E {}
 N 240 -120 240 -30 {lab=B}
 N -0 -220 -0 -200 {lab=vdd}
-N 0 -160 0 -140 {lab=vdd}
+N 0 -160 0 -140 {lab=vss}
 N 240 -120 280 -120 {lab=B}
 N 240 -230 240 -120 {lab=B}
 N -60 -60 60 -60 {lab=ON}
@@ -22,7 +22,7 @@ N 50 -180 60 -180 {lab=#net1}
 N 100 -30 240 -30 {lab=B}
 C {symbols/nfet_03v3.sym} 80 -60 0 0 {name=M1
 L=0.3u
-W=1u
+W=5u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -36,7 +36,7 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 80 -180 0 0 {name=M2
 L=0.3u
-W=2u
+W=10u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"

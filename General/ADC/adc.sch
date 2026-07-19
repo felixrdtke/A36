@@ -11,15 +11,13 @@ N 100 10 220 10 {lab=vss}
 N 220 -10 220 10 {lab=vss}
 N 100 -80 160 -80 {lab=vimax}
 N 100 -50 160 -50 {lab=vimin}
-N 360 -90 420 -90 {lab=vadd}
 N 360 -70 420 -70 {lab=vmid}
-N 360 -50 420 -50 {lab=vsub}
 N 460 -680 580 -680 {lab=#net1}
 N 580 -680 580 -660 {lab=#net1}
 N 460 -620 580 -620 {lab=data}
 N 580 -650 580 -620 {lab=data}
-N 620 -620 620 -590 {lab=vsub}
-N 660 -620 660 -590 {lab=vadd}
+N 620 -620 620 -590 {lab=vimin}
+N 660 -620 660 -590 {lab=vimax}
 N -30 -830 160 -830 {lab=vin}
 N 370 -980 430 -980 {lab=vpipe}
 N 400 -980 400 -960 {lab=vpipe}
@@ -27,13 +25,13 @@ N 250 -710 270 -710 {lab=vcomp}
 N 220 -810 250 -810 {lab=vcomp}
 N 150 -590 270 -590 {lab=vmid}
 N 100 -980 270 -980 {lab=buf_out}
-N 760 -750 790 -750 {lab=#net2}
-N 760 -890 790 -890 {lab=#net3}
-N 1040 -790 1090 -790 {lab=vmid}
+N 760 -750 790 -750 {lab=vc2}
+N 760 -890 790 -890 {lab=vc1}
+N 1040 -830 1090 -830 {lab=vmid}
 N 850 -750 950 -750 {lab=amp_in}
 N 850 -890 950 -890 {lab=amp_in}
 N 950 -890 950 -710 {lab=amp_in}
-N 950 -830 1090 -830 {lab=amp_in}
+N 950 -790 1090 -790 {lab=amp_in}
 N 1210 -810 1250 -810 {lab=vscale}
 N 640 -980 1250 -980 {lab=vscale}
 N 540 -980 640 -980 {lab=vscale}
@@ -60,7 +58,6 @@ N 890 -620 920 -620 {lab=vss}
 N 250 -850 250 -810 {lab=vcomp}
 N 140 -770 170 -770 {lab=vss}
 N 140 -850 170 -850 {lab=vdd}
-N 510 -620 510 -450 {lab=data}
 N 510 -450 570 -450 {lab=data}
 N 100 -690 190 -690 {lab=sample}
 N 190 -760 190 -690 {lab=sample}
@@ -72,7 +69,7 @@ N 950 -300 1000 -300 {lab=phi4}
 N 950 -270 1000 -270 {lab=phi6}
 N 730 -840 730 -820 {lab=phi2}
 N 730 -700 730 -680 {lab=phi2}
-N 930 -600 930 -580 {lab=#net4}
+N 930 -600 930 -580 {lab=#net2}
 N 590 -340 770 -340 {lab=clk}
 N 280 -270 280 -240 {lab=vdd}
 N 280 -270 630 -270 {lab=vdd}
@@ -83,14 +80,14 @@ N 530 -270 530 -210 {lab=vdd}
 N 630 -210 650 -210 {lab=vdd}
 N 650 -270 650 -210 {lab=vdd}
 N 630 -270 650 -270 {lab=vdd}
-N 320 -210 320 -160 {lab=#net5}
-N 320 -160 470 -160 {lab=#net5}
-N 470 -210 470 -160 {lab=#net5}
-N 470 -160 590 -160 {lab=#net5}
-N 590 -210 590 -160 {lab=#net5}
+N 320 -210 320 -160 {lab=#net3}
+N 320 -160 470 -160 {lab=#net3}
+N 470 -210 470 -160 {lab=#net3}
+N 470 -160 590 -160 {lab=#net3}
+N 590 -210 590 -160 {lab=#net3}
 N 510 -180 510 -120 {lab=ibuf}
 N 630 -180 630 -120 {lab=iamp}
-N 280 -180 280 -130 {lab=#net5}
+N 280 -180 280 -130 {lab=#net3}
 N 270 -210 280 -210 {lab=vdd}
 N 270 -270 270 -210 {lab=vdd}
 N 270 -270 280 -270 {lab=vdd}
@@ -98,7 +95,7 @@ N 1160 -890 1160 -850 {lab=iamp}
 N 310 -1050 310 -1020 {lab=ibuf}
 N 540 -960 580 -960 {lab=phi4}
 N 200 -570 270 -570 {lab=phi6}
-N 280 -160 320 -160 {lab=#net5}
+N 280 -160 320 -160 {lab=#net3}
 N 250 -850 600 -850 {lab=vcomp}
 N 640 -770 640 -690 {lab=vshift}
 N 640 -770 700 -770 {lab=vshift}
@@ -108,12 +105,13 @@ N 600 -730 700 -730 {lab=vcomp}
 N 630 -910 700 -910 {lab=vscale}
 N 630 -980 630 -910 {lab=vscale}
 N 790 -530 810 -530 {lab=phi2}
-N 900 -530 930 -530 {lab=#net4}
-N 930 -580 930 -530 {lab=#net4}
+N 900 -530 930 -530 {lab=#net2}
+N 930 -580 930 -530 {lab=#net2}
 N 850 -570 850 -550 {lab=vdd}
 N 850 -510 850 -490 {lab=vss}
 N 100 -790 160 -790 {lab=buf_out}
 N 100 -980 100 -790 {lab=buf_out}
+N 510 -620 510 -450 {lab=data}
 C {ADC/Comparator/Comparator.sym} 420 -650 0 0 {name=x1}
 C {title.sym} 110 120 0 0 {name=l1 author="Tobias Huber"}
 C {ADC/Reference/Reference_circuits_v2.sym} 160 -50 0 0 {name=x2}
@@ -121,9 +119,7 @@ C {iopin.sym} 100 -150 0 1 {name=p1 lab=vdd}
 C {iopin.sym} 100 10 0 1 {name=p2 lab=vss}
 C {iopin.sym} 100 -50 0 1 {name=p3 lab=vimin}
 C {iopin.sym} 100 -80 0 1 {name=p4 lab=vimax}
-C {lab_wire.sym} 420 -90 0 0 {name=p5 sig_type=std_logic lab=vadd}
 C {lab_wire.sym} 420 -70 0 0 {name=p6 sig_type=std_logic lab=vmid}
-C {lab_wire.sym} 420 -50 0 0 {name=p7 sig_type=std_logic lab=vsub}
 C {symbols/cap_mim_2f0fF.sym} 400 -930 0 0 {name=C3
 W=85.5e-6
 L=85.5e-6
@@ -143,8 +139,8 @@ model=cap_mim_2f0fF
 spiceprefix=X
 m=1}
 C {ADC/switching/mux_2to1_wo_single_select.sym} 620 -620 1 1 {name=x3}
-C {lab_wire.sym} 660 -590 3 0 {name=p8 sig_type=std_logic lab=vadd}
-C {lab_wire.sym} 620 -590 3 0 {name=p10 sig_type=std_logic lab=vsub}
+C {lab_wire.sym} 660 -590 3 0 {name=p8 sig_type=std_logic lab=vimax}
+C {lab_wire.sym} 620 -590 3 0 {name=p10 sig_type=std_logic lab=vimin}
 C {ADC/switching/mux_2to1.sym} 150 -790 0 0 {name=x6}
 C {ipin.sym} -30 -830 0 0 {name=p9 lab=vin}
 C {ADC/switching/spst.sym} 380 -960 0 1 {name=x7}
@@ -154,7 +150,7 @@ C {ADC/analogbuffer/analogbuffer.sym} 370 -980 0 1 {name=x4}
 C {ADC/switching/spst.sym} 930 -760 1 1 {name=x10}
 C {lab_wire.sym} 150 -590 0 0 {name=p11 sig_type=std_logic lab=vmid}
 C {ADC/analogbuffer/analogbuffer-openloop.sym} 1090 -790 0 0 {name=x5}
-C {lab_wire.sym} 1040 -790 0 0 {name=p12 sig_type=std_logic lab=vmid}
+C {lab_wire.sym} 1040 -830 0 0 {name=p12 sig_type=std_logic lab=vmid}
 C {lab_wire.sym} 400 -870 0 0 {name=p13 sig_type=std_logic lab=vss}
 C {lab_wire.sym} 330 -910 0 0 {name=p14 sig_type=std_logic lab=vss}
 C {lab_wire.sym} 330 -1050 0 1 {name=p15 sig_type=std_logic lab=vdd}
@@ -240,8 +236,10 @@ C {lab_wire.sym} 1160 -890 0 1 {name=p51 sig_type=std_logic lab=iamp}
 C {lab_wire.sym} 310 -1050 0 0 {name=p52 sig_type=std_logic lab=ibuf}
 C {lab_wire.sym} 580 -960 2 0 {name=p53 sig_type=std_logic lab=phi4}
 C {lab_wire.sym} 200 -570 0 0 {name=p54 sig_type=std_logic lab=phi6}
-C {lab_wire.sym} 1010 -830 0 0 {name=p55 sig_type=std_logic lab=amp_in}
+C {lab_wire.sym} 1010 -790 0 0 {name=p55 sig_type=std_logic lab=amp_in}
 C {lab_wire.sym} 170 -980 0 0 {name=p56 sig_type=std_logic lab=buf_out}
 C {ADC/switching/inv4switch.sym} 930 -530 0 0 {name=x12}
 C {lab_wire.sym} 850 -490 2 0 {name=p57 sig_type=std_logic lab=vss}
 C {lab_wire.sym} 850 -570 0 0 {name=p58 sig_type=std_logic lab=vdd}
+C {lab_wire.sym} 770 -890 1 0 {name=p5 sig_type=std_logic lab=vc1}
+C {lab_wire.sym} 770 -750 1 0 {name=p7 sig_type=std_logic lab=vc2}

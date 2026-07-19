@@ -45,18 +45,18 @@ C {code_shown.sym} 1070 -500 0 0 {name=s1 only_toplevel=false value="
 .control
 
 run
-plot sample clock
 plot data
+plot x1.vcomp clk
 
 .endc
 
 "}
 C {ADC/adc.sym} 620 -300 0 0 {name=x1}
 C {vsource.sym} 360 -180 0 0 {name=V1 value="PULSE 0.1 3.2 600n 10n 10n 600n 1.2u" savecurrent=false}
-C {vsource.sym} 270 -180 0 0 {name=V2 value="PULSE 3.2 0.1 600n 10n 10n 1 1" savecurrent=false}
+C {vsource.sym} 270 -180 0 0 {name=V2 value="PULSE 3.2 0.1 1.2u 10n 10n 1 1" savecurrent=false}
 C {vsource.sym} 200 -180 0 0 {name=V3 value=0.3 savecurrent=false}
 C {vsource.sym} 140 -180 0 0 {name=V4 value=3.0 savecurrent=false}
-C {vsource.sym} 70 -180 0 0 {name=V5 value=2.345 savecurrent=false}
+C {vsource.sym} 70 -180 0 0 {name=V5 value=1.124 savecurrent=false}
 C {gnd.sym} 0 -130 0 0 {name=l2 lab=0}
 C {gnd.sym} 140 -130 0 0 {name=l3 lab=0}
 C {gnd.sym} 200 -130 0 0 {name=l4 lab=0}
