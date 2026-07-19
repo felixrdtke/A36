@@ -24,9 +24,7 @@ N 1040 -740 1040 -690 {lab=vimax}
 N 490 -740 560 -740 {lab=vimax}
 N 1020 -250 1040 -250 {lab=vimin}
 N 420 -740 490 -740 {lab=vimax}
-N 1040 -590 1260 -590 {lab=#net1}
 N 1040 -470 1260 -470 {lab=#net2}
-N 1040 -350 1260 -350 {lab=#net3}
 N 410 -490 410 -350 {lab=#net4}
 N 410 -740 410 -650 {lab=vimax}
 N 390 -570 410 -570 {lab=#net4}
@@ -45,21 +43,8 @@ N 470 -390 470 -320 {lab=#net4}
 N 410 -390 470 -390 {lab=#net4}
 N 530 -410 530 -350 {lab=iref}
 N 250 -770 300 -770 {lab=vdd}
-N 1300 -360 1370 -360 {lab=vsub}
-N 1300 -480 1370 -480 {lab=vmid}
-N 1300 -600 1370 -600 {lab=vadd}
-N 1230 -520 1260 -520 {lab=vss}
-N 1260 -550 1260 -520 {lab=vss}
-N 1260 -520 1300 -520 {lab=vss}
-N 1300 -540 1300 -520 {lab=vss}
-N 1230 -400 1260 -400 {lab=vss}
-N 1260 -430 1260 -400 {lab=vss}
-N 1260 -400 1300 -400 {lab=vss}
-N 1300 -420 1300 -400 {lab=vss}
-N 1230 -280 1260 -280 {lab=vss}
-N 1260 -310 1260 -280 {lab=vss}
-N 1260 -280 1300 -280 {lab=vss}
-N 1300 -300 1300 -280 {lab=vss}
+N 1230 -310 1300 -310 {lab=vsub}
+N 1230 -610 1300 -610 {lab=vadd}
 C {title.sym} 160 -40 0 0 {name=l1 author="Felix Radtke"}
 C {symbols/nplus_u.sym} 1040 -660 0 0 {name=R1
 W=4e-6
@@ -88,9 +73,9 @@ m=1}
 C {iopin.sym} 250 -740 2 0 {name=p5 lab=vimax}
 C {iopin.sym} 250 -230 2 0 {name=p7 lab=vimin}
 C {iopin.sym} 530 -410 3 0 {name=p1 lab=iref}
-C {iopin.sym} 1370 -600 0 0 {name=p8 lab=vadd}
-C {iopin.sym} 1370 -480 0 0 {name=p9 lab=vmid}
-C {iopin.sym} 1370 -360 0 0 {name=p10 lab=vsub}
+C {iopin.sym} 1300 -610 0 0 {name=p8 lab=vadd}
+C {iopin.sym} 1260 -470 0 0 {name=p9 lab=vmid}
+C {iopin.sym} 1300 -310 0 0 {name=p10 lab=vsub}
 C {symbols/nfet_03v3.sym} 430 -320 0 1 {name=M2
 L= 2u
 W= 20u
@@ -130,9 +115,5 @@ spiceprefix=X
 }
 C {lab_wire.sym} 580 -320 0 1 {name=p6 sig_type=std_logic lab=vss}
 C {noconn.sym} 300 -770 2 0 {name=l2}
-C {vcvs.sym} 1300 -570 0 0 {name=E1 value=1}
-C {vcvs.sym} 1300 -450 0 0 {name=E2 value=1}
-C {vcvs.sym} 1300 -330 0 0 {name=E3 value=1}
-C {lab_wire.sym} 1230 -520 0 0 {name=p11 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 1230 -400 0 0 {name=p12 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 1230 -280 0 0 {name=p13 sig_type=std_logic lab=vss}
+C {noconn.sym} 1230 -610 0 0 {name=l3}
+C {noconn.sym} 1230 -310 0 0 {name=l4}
