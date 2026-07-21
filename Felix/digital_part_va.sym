@@ -1,0 +1,82 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {type=primitive
+format="@name @@node_list @model"
+template="name=N1 model=digital_part_va"}
+V {}
+S {type=digital_part_va
+format="@name @@clk @@rst_n @@sync_flag @@sclk @@sample_in @@clk_div2 @@cs_n @@miso @@mosi @@sampled_data_0 @@sampled_data_1 @@sampled_data_2 @@sampled_data_3 @@sampled_data_4 @@sampled_data_5 @@sampled_data_6 @@sampled_data_7 @model"
+
+template="name=X1 model=digital_part_va spiceprefix=X"
+
+device_model="tcleval(
+.subckt digital_part_va clk rst_n sync_flag sclk sample_in clk_div2 cs_n miso mosi sampled_data_0 sampled_data_1 sampled_data_2 sampled_data_3 sampled_data_4 sampled_data_5 sampled_data_6 sampled_data_7
+N1 clk rst_n sync_flag sclk sample_in clk_div2 cs_n miso mosi sampled_data_0 sampled_data_1 sampled_data_2 sampled_data_3 sampled_data_4 sampled_data_5 sampled_data_6 sampled_data_7 digital_part_va_model
+.ends digital_part_va
+
+.model digital_part_va_model digital_part_va
+
+.control
+* Auto-load the compiled Verilog-A file before simulation starts
+pre_osdi /foss/designs/rtl-spi-controller-main/digital_part_va.osdi
+.endc
+)"
+}
+F {}
+E {}
+L 4 170 -140 170 -120 {}
+L 4 40 -70 60 -70 {}
+L 4 40 -90 60 -90 {}
+L 4 170 80 170 100 {}
+L 4 150 -140 150 -120 {}
+L 4 260 -70 280 -70 {}
+L 4 230 80 230 100 {}
+L 4 150 80 150 100 {}
+L 4 40 -50 60 -50 {}
+L 4 260 -30 280 -30 {}
+L 4 210 80 210 100 {}
+L 4 130 80 130 100 {}
+L 4 260 -50 280 -50 {}
+L 4 40 -30 60 -30 {}
+L 4 190 80 190 100 {}
+L 4 110 80 110 100 {}
+L 4 90 80 90 100 {}
+L 4 60 -120 260 -120 {}
+L 4 260 -120 260 80 {}
+L 4 60 80 260 80 {}
+L 4 60 -120 60 80 {}
+B 5 167.5 -142.5 172.5 -137.5 {name=clk dir=in pinnumber=1}
+B 5 37.5 -72.5 42.5 -67.5 {name=sclk dir=out pinnumber=4}
+B 5 37.5 -92.5 42.5 -87.5 {name=sync_flag dir=out pinnumber=3}
+B 5 167.5 97.5 172.5 102.5 {name=sampled_data_3 dir=out pinnumber=13}
+B 5 147.5 -142.5 152.5 -137.5 {name=rst_n dir=in pinnumber=2}
+B 5 277.5 -72.5 282.5 -67.5 {name=cs_n dir=out pinnumber=7}
+B 5 227.5 97.5 232.5 102.5 {name=sampled_data_0 dir=out pinnumber=10}
+B 5 147.5 97.5 152.5 102.5 {name=sampled_data_4 dir=out pinnumber=14}
+B 5 37.5 -52.5 42.5 -47.5 {name=sample_in dir=in pinnumber=5}
+B 5 277.5 -32.5 282.5 -27.5 {name=mosi dir=out pinnumber=9}
+B 5 207.5 97.5 212.5 102.5 {name=sampled_data_1 dir=out pinnumber=11}
+B 5 127.5 97.5 132.5 102.5 {name=sampled_data_5 dir=out pinnumber=15}
+B 5 277.5 -52.5 282.5 -47.5 {name=miso dir=in pinnumber=8}
+B 5 37.5 -32.5 42.5 -27.5 {name=clk_div2 dir=out pinnumber=6}
+B 5 187.5 97.5 192.5 102.5 {name=sampled_data_2 dir=out pinnumber=12}
+B 5 107.5 97.5 112.5 102.5 {name=sampled_data_6 dir=out pinnumber=16}
+B 5 87.5 97.5 92.5 102.5 {name=sampled_data_7 dir=out pinnumber=17
+}
+T {clk} 174 -115 1 0 0.2 0.2 {}
+T {sclk} 65 -74 0 0 0.2 0.2 {}
+T {sync_flag} 65 -94 0 0 0.2 0.2 {}
+T {sampled_data_3} 174 75 1 1 0.2 0.2 {}
+T {rst_n} 146 -115 3 1 0.2 0.2 {}
+T {cs_n} 255 -74 0 1 0.2 0.2 {}
+T {sampled_data_0} 234 75 1 1 0.2 0.2 {}
+T {sampled_data_4} 154 75 1 1 0.2 0.2 {}
+T {sample_in} 65 -54 0 0 0.2 0.2 {}
+T {mosi} 255 -34 0 1 0.2 0.2 {}
+T {sampled_data_1} 214 75 1 1 0.2 0.2 {}
+T {sampled_data_5} 134 75 1 1 0.2 0.2 {}
+T {miso} 255 -54 0 1 0.2 0.2 {}
+T {clk_div2} 65 -34 0 0 0.2 0.2 {}
+T {sampled_data_2} 194 75 1 1 0.2 0.2 {}
+T {sampled_data_6} 114 75 1 1 0.2 0.2 {}
+T {sampled_data_7} 94 75 1 1 0.2 0.2 {}
