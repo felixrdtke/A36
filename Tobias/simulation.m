@@ -2,7 +2,7 @@ vimax = 3.0;
 vimin = 0.3;
 
 #vin = 2.345;
-vin = 1.124;
+vin = 3.0;
 
 vmid = (vimax+vimin)/2;
 vadd = (vimax-vimin)/2;
